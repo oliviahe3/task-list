@@ -10,12 +10,13 @@
     <h1>This is a task list. You can add, rank, and remove tasks.</h1>
 
     <h3>Add New Tasks:</h3>
-    <button id="addTask">Add Task</button>
-    <form id="taskInfo">
-        <span> Class: </span> <input id="class"> <br>
+    <button id="addTask">Add New Task</button>
+    
+    <form id="taskInfo" style="display:none;">
+        <span> Class: </span> <input id="className"> <br>
         <span>Assignment: </span> <input id="taskName"> <br>
         <span>Due Date: </span> <input id="dueDate" type="date"> <br>
-        <button type="submit">Add Task</button>
+        <button type="submit">Submit</button>
     </form>
 
     <h3>Current Task List:</h3>
@@ -23,4 +24,5 @@
     <h3>Completed Tasks:</h3>
 </body>
 
+<script src="script.js"></script>
 </html>
