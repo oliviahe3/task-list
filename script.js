@@ -17,9 +17,14 @@ taskForm.addEventListener("submit", function(e) {
     };
 
     const newInfo = document.createElement("newInfo");
-    newInfo.textContent = `${task.className}, ${task.assignment}, ${task.dueDate}\n`;
-    current.appendChild(newInfo)
+    newInfo.textContent = `${task.className}, ${task.assignment}, ${formatDate(task.dueDate)}\n`;
+    current.appendChild(newInfo);
 
     taskForm.reset();
     taskForm.style.display = "none"
 });
+
+function formatDate(date) {
+    const [year, month, day] = date.split("-");
+    return `${month}-${day}-${year}`;
+};
