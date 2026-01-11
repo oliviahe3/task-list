@@ -16,7 +16,9 @@ taskForm.addEventListener("submit", function(e) {
         dueDate: document.getElementById("dueDate")
     };
 
-    current.textContent += "<p>task</p>"
+    const newInfo = document.createElement("newInfo");
+    newInfo.textContent = `${task.className}, ${task.assignment.assignment}, ${task.dueDate}`;
+    current.appendChild(newInfo)
 
     taskForm.reset();
     taskForm.style.display = "none"
