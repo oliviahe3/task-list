@@ -13,11 +13,11 @@ taskForm.addEventListener("submit", function(e) {
     const task = {
         className: document.getElementById("className").value,
         assignment: document.getElementById("taskName").value,
-        dueDate: document.getElementById("dueDate")
+        dueDate: document.getElementById("dueDate").value
     };
 
     const newInfo = document.createElement("newInfo");
-    newInfo.textContent = `${task.className}, ${task.assignment.assignment}, ${task.dueDate}`;
+    newInfo.textContent = `${task.className}, ${task.assignment}, ${task.dueDate}\n`;
     current.appendChild(newInfo)
 
     taskForm.reset();
